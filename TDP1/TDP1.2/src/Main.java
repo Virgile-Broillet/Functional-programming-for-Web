@@ -1,4 +1,5 @@
 import java.lang.String;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
@@ -16,7 +17,6 @@ public class Main {
         else if (r < 19.0 / 20) return "100";
         else return "banqueroute";
     }
-
 
     public static int tireNbAleatoire(int borneMin, int borneMax) {
         return (int)(Math.random() * (borneMax - borneMin + 1)) + borneMin;
@@ -38,5 +38,9 @@ public class Main {
             }
         }
         return resultat;
+    }
+
+    public static char saisieLettre(String enjeu, int cagnotte, String motMasque, int nbEssais){
+        const invite
     }
 }
