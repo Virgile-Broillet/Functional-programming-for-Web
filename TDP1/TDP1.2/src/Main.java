@@ -87,11 +87,26 @@ public class Main {
     public static void jeu() {
 
         String[] mots = {
+                "ordinateur",
                 "programmation",
                 "java",
                 "pendu",
-                "ordinateur",
-                "fonction"
+                "fonction",
+                "variable",
+                "boucle",
+                "condition",
+                "algorithme",
+                "tableau",
+                "exception",
+                "classe",
+                "objet",
+                "methode",
+                "interface",
+                "heredite",
+                "compilateur",
+                "developpement",
+                "synchronisation",
+                "framework"
         };
 
         String motReel = mots[(int)(Math.random() * mots.length)];
