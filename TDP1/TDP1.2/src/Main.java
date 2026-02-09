@@ -89,7 +89,7 @@ public class Main {
         String[] mots = {
                 "ordinateur",
                 "programmation",
-                "java",
+                "javascript",
                 "pendu",
                 "fonction",
                 "variable",
