@@ -1,15 +1,42 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import java.lang.String;
+
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        int random = tireNbAleatoire(0,20);
+        System.out.printf("Vous avez tiré : "+random);
+    }
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
+    public static String tirerEnjeu() {
+
+        double r = Math.random();
+
+        if (r < 8.0 / 20) return "10";
+        else if (r < 14.0 / 20) return "20";
+        else if (r < 18.0 / 20) return "50";
+        else if (r < 19.0 / 20) return "100";
+        else return "banqueroute";
+    }
+
+
+    public static int tireNbAleatoire(int borneMin, int borneMax) {
+        return (int)(Math.random() * (borneMax - borneMin + 1)) + borneMin;
+    }
+
+    public static int tireCaseAleatoire(int[] Tab) {
+        return Tab[tireNbAleatoire(0, Tab.length)];
+    }
+
+    public static String masqueMot(String mot){
+        String resultat = "";
+        for(int i = 0; i < mot.length(); i++){
+            char c = mot.charAt(i);
+
+            if(Character.isLetter(c)){
+                resultat += "_";
+            }else {
+                resultat += c;
+            }
         }
+        return resultat;
     }
 }
